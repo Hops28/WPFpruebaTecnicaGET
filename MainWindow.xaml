@@ -1,0 +1,40 @@
+﻿<Window x:Class="WPFpruebaTecnicaGET.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFpruebaTecnicaGET"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Contenido izquierdo (imagen) -->
+        <Viewbox Grid.Column="0" Grid.Row="0">
+            <Image Height="350" Source="/50426.jpg"/>
+        </Viewbox>
+
+        <!-- Contenido derecho (formularios) -->
+        <Grid Grid.Column="1" Grid.Row="0" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBox x:Name="txtNombre" Height="30" FontSize="20" Margin="0,0,0,10"/>
+            <TextBox x:Name="txtAPaterno" Height="30" FontSize="20" Margin="0,0,0,10" Grid.Row="1"/>
+            <TextBox x:Name="txtAMaterno" Height="30" FontSize="20" Margin="0,0,0,10" Grid.Row="2"/>
+            <TextBox x:Name="txtIdentificacion" Height="30" FontSize="20" Margin="0,0,0,10" Grid.Row="3"/>
+            <Button x:Name="btnEnviar" Content="Enviar" Width="100" Height="25" Background="#FF004A7C" Foreground="White" FontFamily="Cooper Black" Grid.Row="4" Click="Button_Click"/>
+        </Grid>
+    </Grid>
+</Window>
